@@ -18,6 +18,12 @@ let sentence: string = `Hello, my name is ${fullName}.
 I'll be ${age + 1} years old next month.`;
 
 console.log(sentence);
+//Symbols - Immutable and unique . Two symbels with same values are still different 
+
+//let symbolVariable = Symbol("a");
+//let anotherSymbolVariable = Symbol("a");
+
+//console.log("Symbol comparison result " + (symbolVariable === anotherSymbolVariable)); // Returns false 
 
 
 //Array 
@@ -142,4 +148,15 @@ let functionWithInfiniteLoopAndNeverReturn = () : never =>  {
 
 //functionWithInfiniteLoopAndNeverReturn();
 
-//non primitive types -- boolean, number, string, bigint,
+//non primitive types -- boolean, number, string, bigint,symbol , null , undefined 
+//Objects
+let objectVariable : Object  = {a : "Test "}
+console.log(objectVariable);
+//Type assertion - We know more than type script 
+//Type assertion using as 
+let someValue : unknown ="Hello World ";
+let lengthOfString = (someValue as string).length;
+console.log("Length of string "+lengthOfString);
+//type assertion using angle bracket 
+lengthOfString = (<string>someValue).length
+console.log("Length of string "+lengthOfString);
