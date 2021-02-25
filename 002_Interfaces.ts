@@ -68,3 +68,25 @@ let addNumber : IAdditionFunction = (firstNumber : number, secondNumber : number
 let result : number = addNumber(10,20);
 console.log(`Sum of  numbers in ${result}`);
 
+//indexable types 
+//Shape of a type which can be iterated 
+
+interface StringArray {
+    [index:number]: string;
+}
+let stringArray : StringArray = ["a","b"];
+console.log(`string indexible type data ${stringArray[0]}`)
+
+//Class Type 
+
+interface ClockInterface {
+    currentTime : Date,
+    setTime(d:Date):void
+}
+
+class Clock implements ClockInterface{
+    currentTime: Date;
+    setTime(d: Date): void {
+        this.currentTime=d;
+    }
+}
