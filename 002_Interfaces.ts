@@ -16,6 +16,9 @@ let input = {m : "Hello World", unwantedProperty : "useless"};
 //Sending additonal properties 
 let input2  = {message : "Hello World", unwantedProperty : "useless"};
 messagePrinter(input2);//We cannot send the object directly 
+//Excess property checks
+//Need to do 
+
 // Optional Parameters 
 
 interface PersonDetails {
@@ -50,4 +53,18 @@ console.log(`Lenght of array = ${anotherArray.length}`);
 anotherArray[1] = 10 ;
 console.log(`changed value = ${anotherArray[1]}`); // Value changed 
 console.log(`Value in readonly array = ${readOnlyArray[1]}`);// Value changed 
+
+//function types 
+//Shape of a functon 
+
+interface IAdditionFunction{
+    (firstNumber : number, secondNumber : number ) : number
+}
+
+let addNumber : IAdditionFunction = (firstNumber : number, secondNumber : number ) : number=> {
+    return firstNumber + secondNumber
+}
+
+let result : number = addNumber(10,20);
+console.log(`Sum of  numbers in ${result}`);
 
