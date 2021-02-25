@@ -81,7 +81,8 @@ console.log(`string indexible type data ${stringArray[0]}`)
 
 interface ClockInterface {
     currentTime : Date,
-    setTime(d:Date):void
+    setTime(d:Date):void,
+    showTime():void
 }
 
 class Clock implements ClockInterface{
@@ -89,4 +90,41 @@ class Clock implements ClockInterface{
     setTime(d: Date): void {
         this.currentTime=d;
     }
+    showTime():void{
+            console.log(this.currentTime)
+    }
 }
+
+let clock = new Clock();
+clock.setTime(new Date());
+clock.showTime();
+
+// extending interfaces 
+
+interface IShape {
+    color : string  
+}
+
+interface ISquare extends IShape{
+    sideLength : number,
+    showArea() : void
+
+}
+
+let square  = {} as ISquare;
+square.sideLength=10;
+square.color = "Red";
+
+class Square implements ISquare{
+    showArea(): void {
+        console.log(this.sideLength * this.sideLength)
+    }
+    sideLength: number;
+    color: string;
+
+}
+
+let sq: Square = new Square();
+sq.color = "Orange";
+sq.sideLength = 25 ; 
+sq.showArea();
