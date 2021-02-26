@@ -1,5 +1,4 @@
-//Union Types - Value which can be of multiple types/
-// only common members can be accessed 
+//Union Types - Create a type with common member from constituent types 
 
 
 interface Type1 {
@@ -10,18 +9,24 @@ interface Type2{
     commonMethod():void;
 }
 
-let getType = (choice : number) : Type1|Type2 =>{
-    let type1Obbject : Type1;
-    let type2Object : Type2;
-    return (choice%2 == 0 ? type1Obbject :  type2Object);
+let getType = () : Type1|Type2 =>{
+    
+
+    type CommonMemberType = Type1 | Type2;
+
+    let commonMemberType : CommonMemberType = {
+        commonMethod : () => {console.log("Message from a union type ")}
+    }
+    return commonMemberType
+
 }
 
-let a = getType(1);
+let a = getType();
 
-//a.commonMethod();
+console.log(a.commonMethod());
 
 //Interstection Types 
-// All the members in both the interfaces.
+// Create a type with all members from constituent types. 
 interface ICommonInterface
 {
     commonMessage : string 
