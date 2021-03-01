@@ -65,8 +65,8 @@ let addNumber : IAdditionFunction = (firstNumber : number, secondNumber : number
     return firstNumber + secondNumber
 }
 
-let result : number = addNumber(10,20);
-console.log(`Sum of  numbers in ${result}`);
+let result2 : number = addNumber(10,20);
+console.log(`Sum of  numbers in ${result2}`);
 
 //indexable types 
 //Shape of a type which can be iterated 
