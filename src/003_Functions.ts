@@ -1,6 +1,6 @@
 //Named function 
 
-function addNumbers(a:number , b: number ) : number {
+function addNumbers2(a:number , b: number ) : number {
     return a + b ;
 }
 console.log(`Sum of numbers  = ${addNumbers(10,20)}`)
