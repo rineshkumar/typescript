@@ -21,3 +21,4 @@ console.log(unsortedArray.includes(5)); // true
 
 console.log(numberArray.concat(unsortedArray).sort());//[1, 2, 3, 4,4, 5, 5]
 
+numberArray.forEach(x => console.log(`${x} ${x}`)) // 4 4 5 5 
