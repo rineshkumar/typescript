@@ -1,10 +1,2 @@
-001_BasicTypes.js
-002_Interfaces.js
-003_Functions.js
-004_LiteralTypes.js
-005_UnionAndIntersectionTypes.js
-006_Classes.js
-007_Enums.js
-009_Utilities.js
-008_Generics.js
 node_modules
+dist/
