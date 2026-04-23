@@ -160,6 +160,27 @@ let rivers = ['Nile', 'Ganges', 'Yangte'];
 let moreRivers = ['Danube', 'Amazon'];  
 rivers.push(...moreRivers);   
 
+### using spread with arrays ###
+
+#### Appending one array elements to another 
+
+let initialChars = ['A', 'B'];  
+let chars = [...initialChars, 'C', 'D'];  
+console.log(chars); // ["A", "B", "C", "D"]  
+
+#### Concatenating arrays to new array ###
+
+let numbers = [1, 2];  
+let moreNumbers = [3, 4];  
+let allNumbers = [...numbers, ...moreNumbers];  
+console.log(allNumbers); // [1, 2, 3, 4]  
+
+#### Copying array ####
+
+let scores = [80, 70, 90];   
+let copiedScores = [...scores];//Shallow copy   
+console.log(copiedScores); // [80, 70, 90]  
+
 
 
 
