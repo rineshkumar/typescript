@@ -181,6 +181,15 @@ let scores = [80, 70, 90];
 let copiedScores = [...scores];//Shallow copy   
 console.log(copiedScores); // [80, 70, 90]  
 
+### spread operator and strings ###
+
+#### Spreading to a character array ###
+
+let chars = ['A', ...'BC', 'D'];  
+console.log(chars); // ["A", "B", "C", "D"]  
+
+
+
 
 
 
