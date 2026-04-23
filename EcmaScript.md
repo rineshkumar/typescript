@@ -4,7 +4,7 @@
 
 [Reference Tutorial](https://www.javascripttutorial.net/es6/)
 
-**let : block scoped variable**
+## let : block scoped variable ##
 
 let x = 10;  
 if (x == 10) {    
@@ -12,3 +12,10 @@ if (x == 10) {
     console.log(x); // 20:  reference x inside the block    
 }    
 console.log(x); // 10: reference at the begining of the script  
+
+## const : Declaring constants ##
+
+**const CONSTANT_NAME = value;**
+
+variables declared by the const keyword *can’t be reassigned*
+you **need to initialize** the value to the variable
