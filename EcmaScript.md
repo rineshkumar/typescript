@@ -133,7 +133,29 @@ console.log(combined);
 
 ### difference between spread and rest operator ###
 
-spread operator (...) unpacks the elements of an iterable object.
-rest parameter (...) packs the elements into an array.
+spread operator (...) unpacks the elements of an iterable object.  
+rest parameter (...) packs the elements into an array.  
+
+pread operator can be anywhere  
+rest parameters must be the last arguments of a function.  
+
+const spreadCombined = [...odd, 2,4,6];  
+const spreadCombined = [2,...odd, 4,6];  
+
+### using spread with function ###
+
+> function compare(a, b) { 
+    return a - b; 
+} 
+
+let result = compare(...[1, 2]); 
+console.log(result); // -1 
+
+1,2 will be taken from array and assigned to a,b  
+
+
+
+
+
 
 
