@@ -121,3 +121,19 @@ args will be []
 >     });  
 > }  
 
+
+## Spread Operator ##
+**spreads out elements of an iterable object.**
+
+const odd = [1,3,5];
+const combined = [2,4,6, ...odd];
+console.log(combined);
+
+[ 2, 4, 6, 1, 3, 5 ]
+
+### difference between spread and rest operator ###
+
+spread operator (...) unpacks the elements of an iterable object.
+rest parameter (...) packs the elements into an array.
+
+
