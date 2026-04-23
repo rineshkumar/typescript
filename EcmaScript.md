@@ -50,7 +50,14 @@ console.log(colors); // []
 
 colors = []; // TypeError  
 
+### const in for loop ###
 
+If we dont want to modify the value of an element from an iterable object (arrays, sets, maps) we can use const 
+
+let scores = [75, 80, 95];  
+for (const score of scores) {  
+    console.log(score);  
+}  
 
 
 
