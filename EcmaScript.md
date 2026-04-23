@@ -59,8 +59,24 @@ for (const score of scores) {
     console.log(score);  
 }  
 
+## Default function parameters ##
 
+function say(message='Hi') {  
+    console.log(message);  
+}  
 
+say(); // 'Hi'  
+say(undefined); // 'Hi'  
+say('Hello'); // 'Hello'  
 
+if there was no default parameter we would do this 
 
+> message = typeof message !== 'undefined' ? message : 'Hi';
 
+let taxRate = () => 0.1;  
+let getPrice = function( price, tax = price * taxRate() ) {  
+    return price + tax;  
+}  
+
+let fullPrice = getPrice(100);  
+console.log(fullPrice); // 110  
