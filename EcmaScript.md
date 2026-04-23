@@ -111,13 +111,13 @@ args will be [3,'A','B','C']
 fn(1,2);
 args will be []
 
-> function sum(...args) {
->   return args
->     .filter(function (e) {
->       return typeof e === 'number';
->     })
->     .reduce(function (prev, curr) {
->       return prev + curr;
->     });
-> }
+> function sum(...args) {  
+>   return args  
+>     .filter(function (e) {  
+>       return typeof e === 'number';   
+>     })  
+>     .reduce(function (prev, curr) {  
+>       return prev + curr;  
+>     });  
+> }  
 
