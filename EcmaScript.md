@@ -20,7 +20,7 @@ console.log(x); // 10: reference at the begining of the script
 variables declared by the const keyword *can’t be reassigned*
 you **need to initialize** the value to the variable
 
-### JavaScript const and Objects ###
+### JavaScript const and Objects
 
 After an object is assigned to a variable, it **cannot be reassigned** another object
 
@@ -30,13 +30,14 @@ console.log(person.age); // 30
 
 person = { age: 40 }; // TypeError  
 
-### Using Object.freeze() ###
+### Using Object.freeze()
+
 For making value of the object immutable
 
 const person = Object.freeze({age: 20});  
 person.age = 30; // TypeError
 
-### const with arrays ###
+### const with arrays
 
 Cannot be reassigned 
 
@@ -50,7 +51,7 @@ console.log(colors); // []
 
 colors = []; // TypeError  
 
-### const in for loop ###
+### const in for loop
 
 If we dont want to modify the value of an element from an iterable object (arrays, sets, maps) we can use const 
 
@@ -59,7 +60,7 @@ for (const score of scores) {
     console.log(score);  
 }  
 
-## Default function parameters ##
+## Default function parameters
 
 function say(message='Hi') {  
     console.log(message);  
@@ -81,8 +82,8 @@ let getPrice = function( price, tax = price * taxRate() ) {
 let fullPrice = getPrice(100);  
 console.log(fullPrice); // 110  
 
+### The arguments object
 
-### The arguments object ###
 arguments object inside the function is the **number of actual arguments that you pass to the function**
 
 function add(x, y = 1, z = 2) {  
@@ -93,4 +94,30 @@ function add(x, y = 1, z = 2) {
 add(10); // 1  
 add(10, 20); // 2  
 add(10, 20, 30); // 3  
+
+## Rest parameters
+
+**gather parameters and put them all in an array**
+has a prefix of three dots (...)
+must appear at the end of the argument list
+
+function fn(a,b,...args) {  
+   //...  
+}  
+
+fn(1, 2, 3, "A", "B", "C");
+args will be [3,'A','B','C']
+
+fn(1,2);
+args will be []
+
+> function sum(...args) {
+>   return args
+>     .filter(function (e) {
+>       return typeof e === 'number';
+>     })
+>     .reduce(function (prev, curr) {
+>       return prev + curr;
+>     });
+> }
 
