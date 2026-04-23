@@ -148,10 +148,18 @@ const spreadCombined = [2,...odd, 4,6];
     return a - b; 
 } 
 
-let result = compare(...[1, 2]); 
+let result = compare(...[1, 2]);  
 console.log(result); // -1 
 
 1,2 will be taken from array and assigned to a,b  
+
+
+### using spread with array push ###
+
+let rivers = ['Nile', 'Ganges', 'Yangte'];  
+let moreRivers = ['Danube', 'Amazon'];  
+rivers.push(...moreRivers);   
+
 
 
 
