@@ -1,4 +1,4 @@
-# typescript
+# Markdown
 
 [https://www.markdownguide.org/getting-started/](https://www.markdownguide.org/getting-started/)
 
