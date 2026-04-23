@@ -80,3 +80,17 @@ let getPrice = function( price, tax = price * taxRate() ) {
 
 let fullPrice = getPrice(100);  
 console.log(fullPrice); // 110  
+
+
+### The arguments object ###
+arguments object inside the function is the **number of actual arguments that you pass to the function**
+
+function add(x, y = 1, z = 2) {
+    console.log( arguments.length );
+    return x + y + z;
+}
+
+add(10); // 1
+add(10, 20); // 2
+add(10, 20, 30); // 3
+
