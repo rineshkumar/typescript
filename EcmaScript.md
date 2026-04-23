@@ -20,7 +20,7 @@ console.log(x); // 10: reference at the begining of the script
 variables declared by the const keyword *can’t be reassigned*
 you **need to initialize** the value to the variable
 
-### JavaScript const and Objects
+### JavaScript const and Objects ###
 
 After an object is assigned to a variable, it **cannot be reassigned** another object
 
@@ -30,8 +30,30 @@ console.log(person.age); // 30
 
 person = { age: 40 }; // TypeError  
 
-#### Using Object.freeze() ####
+### Using Object.freeze() ###
 For making value of the object immutable
 
 const person = Object.freeze({age: 20});  
-person.age = 30; // TypeError  
+person.age = 30; // TypeError
+
+### const with arrays ###
+
+Cannot be reassigned 
+
+const colors = ['red'];  
+colors.push('green');  
+console.log(colors); // ["red", "green"]  
+
+colors.pop();  
+colors.pop();  
+console.log(colors); // []  
+
+colors = []; // TypeError  
+
+
+
+
+
+
+
+
