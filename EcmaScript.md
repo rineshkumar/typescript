@@ -349,3 +349,50 @@ output
 >     console.log(num);  
 > }  
 
+## Octal and Binary Literals in ES6
+
+In ES5 we used   
+
+prefix 0 for octal   
+
+no prefix for decimal   
+
+prefix 0X for hexadecimal  
+
+let a = 051;  
+console.log(a); // 41  
+
+in ES6 we use 0o for octal  
+
+ let c = 0o51;    
+console.log(c); // 41 
+
+### Binary Literals ###
+
+in ES6 we use 0b  
+
+let f = 0b111;  
+console.log(f); // 7  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
