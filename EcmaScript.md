@@ -572,7 +572,7 @@ console.log(name); // { firstName: 'John', lastName: 'Doe' }
 
 ### Destructuring function arguments ###
 
-let display = ({firstName, lastName}) => console.log(`${firstName} ${lastName}`);  
+let display = ({firstName, lastName}) => console.log(\`${firstName} ${lastName}\`);  
 
 let person = {  
     firstName: 'John',  
