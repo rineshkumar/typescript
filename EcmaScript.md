@@ -390,10 +390,10 @@ console.log(typeof str);// string
 
 We can use single and double quote without escaping 
 
-let anotherStr = `Here's a template literal`;
+let anotherStr = \`Here's a template literal\`;
 
-escape back tick if its there
-let strWithBacktick = `Template literals use backticks \` insead of quotes`;
+escape back tick if its there  
+let strWithBacktick = \`Template literals use backticks \\\` insead of quotes\`;
 
 ### multiline strings ###
 
@@ -405,9 +405,8 @@ let msg = ['This text',
 
 Using ES6 
 
-let p =  
-`This text  
+let p = \`This text  
 can  
-span multiple lines`;  
+span multiple lines\`;  
 
 
