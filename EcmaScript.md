@@ -188,12 +188,86 @@ console.log(copiedScores); // [80, 70, 90]
 let chars = ['A', ...'BC', 'D'];  
 console.log(chars); // ["A", "B", "C", "D"]  
 
+## Object literal ##
 
+**for creating objects in JavaScript**
 
+Before ES6  
 
+>function createMachine(name, status) {  
+    return {  
+        name: name,  
+        status: status  
+    };  
+}  
 
+From ES6  
 
+>function createMachine(name, status) {  
+    return {  
+        name,  
+        status  
+    };  
+}  
 
+### creating objects with initialization ###
 
+let name = 'Computer', status = 'On';  
 
+let machine = {  
+   name,  
+   status  
+};  
+
+### Computed property name ###
+
+These are propery names which change in the same type  
+use [] to use computed property names 
+
+Before ES6
+
+let name = 'machine name';  
+let machine = {  
+    [name]: 'server',//Property name is machine name  
+    'machine hours': 10000  
+};  
+
+console.log(machine[name]); // server  
+console.log(machine['machine hours']); // 10000  
+
+In ES6
+
+In ES6, the computed property name is a part of the object literal syntax
+
+let prefix = 'machine';  
+let machine = {  
+    [prefix + ' name']: 'server',//Computed property  
+    [prefix + ' hours']: 10000//Computed property  
+};  
+
+console.log(machine['machine name']); // server  
+console.log(machine['machine hours']); // 10000  
+
+### Concise method syntax ###
+
+**Before ESG**
+function was defined as follows  
+
+let server = {  
+	name: "Server",  
+	restart: function () {//function keyword was used  
+		console.log("The" + this.name + " is restarting...");  
+	}  
+};  
+
+**In ES6**
+
+: function is removed  
+
+let server = {  
+    name: 'Server',  
+    restart() {//: function removed  
+        console.log("The" + this.name + " is restarting...");  
+    }  
+};  
 
