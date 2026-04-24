@@ -430,3 +430,98 @@ console.log(netPrice); // netPrice:$9.89
 
 
 
+## ES6 Destructuring Assignment ##
+
+**Allows you to destructure an array into individual variables.**
+
+### Destructuring arrays ###
+function getScores() {  
+  return [70, 80, 90];  
+}  
+
+let [x, y, z] = getScores();destructuring arrays   
+
+console.log({ x, y, z });//Creating an object using variables  
+
+#### Destructuring arrays with Rest parameters ####
+
+function getScores() {  
+  return [70, 80, 90, 100];  
+}  
+
+let [x, y, ...args] = getScores();  
+
+console.log({ x, y, args });  
+
+#### Destructuring arrays to variables ####
+
+let a, b;  
+[a, b] = [10, 20];  
+
+console.log({ a, b });  
+
+#### setting default values ####
+
+function getItems() {  
+  return [10, 20];  
+}  
+
+let [, , thirdItem = 0] = getItems();  
+console.log(thirdItem); // 0  
+
+let a, b;  
+[a = 1, b = 2] = [10];  
+console.log(a); // 10  
+console.log(b); // 2  
+
+in case function getitems returns null , we can use 
+
+let [a,b,c] = getItems() || [];  
+
+### Nested array destructuring ###
+
+function getProfile() {  
+    return [  
+        'John',  
+        'Doe',
+        ['Red', 'Green', 'Blue']  
+    ];  
+}  
+
+let [ 
+    firstName, 
+    lastName, 
+    [ 
+        color1, 
+        color2, 
+        color3 
+    ] 
+] = getProfile();
+
+console.log(color1, color2, color3);
+
+### Array Destructuring Assignment Applications ###
+
+#### Swapping variables ####
+
+let a = 10,  
+    b = 20;  
+
+[a, b] = [b, a];  
+
+console.log(a); // 20  
+console.log(b); // 10  
+
+#### Functions that return multiple values ####
+function stat(a, b) {  
+    return [  
+        a + b,  
+        (a + b) / 2,  
+        a - b  
+    ]  
+}  
+
+let [sum, average, difference] = stat(20, 10);  
+console.log(sum, average, difference); // 30, 15, 10  
+
+
