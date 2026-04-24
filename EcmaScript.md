@@ -364,35 +364,50 @@ console.log(a); // 41
 
 in ES6 we use 0o for octal  
 
- let c = 0o51;    
+ let c = 0o51;  
 console.log(c); // 41 
 
-### Binary Literals ###
+### Binary Literals
 
 in ES6 we use 0b  
 
 let f = 0b111;  
 console.log(f); // 7  
 
+## Template Literals
 
+**makes working with a string template easier**
 
+create a template literal by wrapping your text in backticks (`)
 
+> let simple = This is a template literal;
 
+let str = Template literal in ES6;  
 
+console.log(str);// Template literal in ES6  
+console.log(str.length); // 23  
+console.log(typeof str);// string  
 
+We can use single and double quote without escaping 
 
+let anotherStr = `Here's a template literal`;
 
+escape back tick if its there
+let strWithBacktick = `Template literals use backticks \` insead of quotes`;
 
+### multiline strings ###
 
+OLD WAY -- use string concatenation with join method 
 
+let msg = ['This text',  
+         'can',  
+         'span multiple lines'].join('\n');  
 
+Using ES6 
 
-
-
-
-
-
-
-
+let p =  
+`This text  
+can  
+span multiple lines`;  
 
 
