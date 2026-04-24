@@ -524,4 +524,60 @@ function stat(a, b) {
 let [sum, average, difference] = stat(20, 10);  
 console.log(sum, average, difference); // 30, 15, 10  
 
+## JavaScript Object Destructuring ##
+
+**Assigns properties of an object to individual variables**
+
+let person = {  
+    firstName: 'John',  
+    lastName: 'Doe'  
+};  
+
+let { firstName, lastName } = person;  
+
+console.log(firstName); // 'John'  
+console.log(lastName); // 'Doe'  
+
+### Default values ###
+let { firstName, lastName, middleName = '', currentAge: age = 18 } = person;  
+console.log(middleName); // ''
+console.log(age); // 18
+
+### handling null objects ###
+
+if getPerson can return null we can handle as follows 
+
+let { firstName, lastName } = getPerson() || {};  
+
+### Nested object destructuring ###
+let employee = {  
+    id: 1001,  
+    name: {  
+        firstName: 'John',  
+        lastName: 'Doe'  
+    }  
+};  
+
+let { 
+    name: { 
+        firstName, 
+        lastName 
+    } 
+} = employee; 
+
+console.log(firstName); // John  
+console.log(lastName); // Doe  
+console.log(name); // { firstName: 'John', lastName: 'Doe' }  
+
+
+### Destructuring function arguments ###
+
+let display = ({firstName, lastName}) => console.log(`${firstName} ${lastName}`);  
+
+let person = {  
+    firstName: 'John',  
+    lastName: 'Doe'  
+};  
+
+display(person);  
 
