@@ -15,7 +15,7 @@ function display(message) {
 export { display };  
 
 
-To use it in index.js file, we will have to import it 
+To use it in index.js file, we will have to import it   
 **Add this to import from other files**   
 import { display } from './lib.js';  
 
