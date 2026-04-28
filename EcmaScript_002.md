@@ -24,7 +24,7 @@ display('Hi');
 
 When we are using index.js in an html we will use type="module" as below to  instruct the web browser to load the index.js file as a module:  
 
- <script src="js/index.js" type="module"></script>
+ **<script src="js/index.js" type="module"></script>**
 
 
 
