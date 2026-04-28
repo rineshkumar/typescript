@@ -11,7 +11,7 @@ function display(message) {
   el.innerText = message;  
   document.body.appendChild(el);  
 }  
-**Add the following to use it in other files.**
+**Add the following to use it in other files.**  
 export { display };  
 
 
