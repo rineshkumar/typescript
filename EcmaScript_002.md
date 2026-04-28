@@ -16,7 +16,7 @@ export { display };
 
 
 To use it in index.js file, we will have to import it 
-**Add this to import from other files** 
+**Add this to import from other files**   
 import { display } from './lib.js';  
 
 display('Hi');  
